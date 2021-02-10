@@ -15,7 +15,7 @@ try:
     input3.send_keys("Smolensk")
     input4 = browser.find_element_by_id("country")
     input4.send_keys("Russia")
-    button = browser.find_element_by_xpath()"//button[@type="submit"]")
+    button = browser.find_element_by_xpath("//button[@type='submit']")
     button.click()
 
     # успеваем скопировать код за 30 секунд
