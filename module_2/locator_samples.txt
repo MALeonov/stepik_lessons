@@ -1,5 +1,5 @@
-input... css id
-//input... xp name
-input... css class
-//input... xp my atr
-//input... xp class
+input#name
+//input[@name="userlastname"]
+input.form-control.third
+//input[@custom_attr="custom_value_4"]
+//input[@class="form-control second"]
