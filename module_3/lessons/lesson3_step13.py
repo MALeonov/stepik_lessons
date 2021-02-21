@@ -14,7 +14,7 @@ try:
     x_element = browser.find_element_by_id("input_value")
     x = x_element.text
     y = calc(x)
-
+    print(x)
 
     answer = browser.find_element_by_id("answer")
     browser.execute_script("return arguments[0].scrollIntoView(true);", )
