@@ -31,4 +31,4 @@ class LoginPage(BasePage):
             f"Wrong text in welcome massage: '{welcome_message.text}', and must be '{welcome_text[self.browser.language]}'"
 
     def should_be_exit_button(self):
-        assert self.is_element_present(*LoginPageLocators.EXIT_BUTTON), "Exit button is not presented"
+        assert self.is_element_present(*LoginPageLocators.LOGOUT_BUTTON), "Logout button is not presented"
