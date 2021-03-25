@@ -10,3 +10,4 @@ class LoginPageLocators():
 
 class ProductPageLocators():
     ADD_CARD_BUTTON = (By.CSS_SELECTOR, ".btn-add-to-basket")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alertinner")

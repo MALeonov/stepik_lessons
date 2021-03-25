@@ -1,36 +1,19 @@
-#from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
-
-#data
-link = "http://selenium1py.pythonanywhere.com"
 
 class TestLoginPage:
     def test_user_can_login(self, browser):
-        page = LoginPage(browser, link)
-        page.open()
+        # data
+        link = "http://selenium1py.pythonanywhere.com/accounts/login/"
+        login_text = "m.a.leonov@yandex.ru"
+        password_text = "R6vhfB72sV8XN6v"
+        welcome_text = {'ru': 'Рады видеть вас снова', 'es': 'Bienvenido de nuevo', 'en-gb': 'Welcome back', 'fr': 'Bienvenue'}
 
-        page.go_to_login_page()
-        login_page = LoginPage(browser, browser.current_url)
-        login_page.should_be_log_in()
+        # arrange
+        login_page = LoginPage(browser, link)
+        login_page.open()
 
+        # act
+        login_page.log_in(login_text, password_text)
 
-
-#    def test_guest_can_login(self, browser):
-#        page = MainPage(browser, link)
-#        page.open()
-
-#        login_page = page.go_to_login_page()
-#        login_page.should_be_login_page()
-
-#    def test_guest_should_see_login_link(self, browser):
-#        page = MainPage(browser, link)
-#        page.open()
-
-#        page.should_be_login_link()
-
-#    def test_guest_can_go_to_login_page(self, browser):
-#        page = MainPage(browser, link)
-#        page.open()
-#        page.go_to_login_page()
-#        login_page = LoginPage(browser, browser.current_url)
-#        login_page.should_be_login_page()
+        # assert
+        login_page.assert_log_in(welcome_text)

@@ -8,9 +8,4 @@ class LoginPageLocators():
     PASSWORD_FIELD = (By.CSS_SELECTOR, "#id_login-password")
     LOGIN_BUTTON = (By.CSS_SELECTOR, "[name='login_submit']")
     WELCOME_MESSAGE = (By.CSS_SELECTOR, ".wicon")
-    LOGOUT_BUTTON = (By.CSS_SELECTOR, "#logout_link")
-
-#class ProductPageLocators():
-#    ADD_CARD_BUTTON = (By.CSS_SELECTOR, ".btn-add-to-basket")
-
-    #change
+    LOGOUT_BUTTON = (By.CSS_SELECTOR, "#logout_link1")
