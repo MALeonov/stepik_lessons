@@ -1,6 +1,7 @@
 from .base_page import BasePage
 from .locators import LoginPageLocators
 
+
 class LoginPage(BasePage):
     def assert_log_in(self, welcome_text):
         self.assert_welcome_message(welcome_text)

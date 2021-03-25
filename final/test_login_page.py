@@ -1,12 +1,14 @@
 from .pages.login_page import LoginPage
 
+
 class TestLoginPage:
     def test_user_can_login(self, browser):
         # data
         link = "http://selenium1py.pythonanywhere.com/accounts/login/"
         login_text = "m.a.leonov@yandex.ru"
         password_text = "R6vhfB72sV8XN6v"
-        welcome_text = {'ru': 'Рады видеть вас снова', 'es': 'Bienvenido de nuevo', 'en-gb': 'Welcome back', 'fr': 'Bienvenue'}
+        welcome_text = {'ru': 'Рады видеть вас снова', 'es': 'Bienvenido de nuevo', 'en-gb': 'Welcome back',
+                        'fr': 'Bienvenue'}
 
         # arrange
         login_page = LoginPage(browser, link)
