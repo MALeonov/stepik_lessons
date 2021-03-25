@@ -2,6 +2,7 @@ from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class BasePage():
     def __init__(self, browser, url, timeout=4):
         self.browser = browser
@@ -31,5 +32,4 @@ class BasePage():
                 until_not(EC.presence_of_element_located((how, what)))
         except TimeoutException:
             return False
-
         return True
