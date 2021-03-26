@@ -86,3 +86,9 @@ class TestProductPage:
 
         # assert
         page.should_be_login_page()
+
+    def test_guest_cant_see_product_in_basket_opened_from_product_page(self, browser):
+#        Гость открывает страницу товара
+#        Переходит в корзину по кнопке в шапке
+#        Ожидаем, что в корзине нет товаров
+#        Ожидаем, что есть текст о том что корзина пуста
