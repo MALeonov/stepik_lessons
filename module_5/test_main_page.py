@@ -1,6 +1,6 @@
-from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
 from .pages.basket_page import BasketPage
+import pytest
 
 
 class TestMainPage:
@@ -10,7 +10,7 @@ class TestMainPage:
         link = "http://selenium1py.pythonanywhere.com/"
 
         # arrange
-        page = MainPage(browser, link)
+        page = LoginPage(browser, link)
         page.open()
 
         # act
@@ -25,7 +25,7 @@ class TestMainPage:
         link = "http://selenium1py.pythonanywhere.com/"
 
         # arrange
-        page = MainPage(browser, link)
+        page = LoginPage(browser, link)
         page.open()
 
         # assert
@@ -60,5 +60,3 @@ class TestMainPage:
 
         # assert
         page.should_be_empty_basket()
-
-
